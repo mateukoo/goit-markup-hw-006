@@ -27,7 +27,7 @@ body {
   color: #212121;
 }
 
-@keyframes slideInFromLeft {
+@keyframes slideInFromTop {
   0% {
     transform: translatey(-150%);
   }
@@ -37,8 +37,8 @@ body {
 }
 
 header {  
-  /* This section calls the slideInFromLeft animation we defined above */
-  animation: 2s ease-out 0s 1 slideInFromLeft; 
+ 
+  animation: 2s ease-out 0s 1 slideInFromTop; 
 }
 
 main .main-banner, .brand-values, .portfolio-section { 
