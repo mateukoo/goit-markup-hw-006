@@ -112,6 +112,12 @@ nav {
   gap: 10px;
 }
 
+.contact-link-smartphone-topbar,
+.contact-link-email-topbar {
+  display: flex;
+  align-items: center;
+}
+
 .contact-link:hover,
 .contact-link:focus {
   fill: var(--brand-color);
