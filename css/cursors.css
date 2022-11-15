@@ -8,16 +8,18 @@
 } */
 .cursor {
   position: absolute;
-  width: 30px;
-  height: 30px;
+  width: 16px;
+  height: 16px;
   top: -50%;
   left: -50%;
+ border: 2px solid var(--brand-color);
   margin: -15px 0 0 -15px;
   border-radius: 50%;
   background-color: white;
+ /* backdrop-filter: blur(1px); */
   backface-visibility: hidden;
   transition: transform 0.2s ease-out;
-  mix-blend-mode: difference;
+  mix-blend-mode: normal;
   z-index: 1000;
   pointer-events: none;
 }
