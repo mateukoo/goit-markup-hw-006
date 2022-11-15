@@ -15,6 +15,11 @@ input {
   margin: 0;
 }
 
+fieldset {
+  border: none;
+  padding: 0;
+}
+
 h1,
 h2,
 h3,
