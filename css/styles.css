@@ -7,6 +7,13 @@
   --background-color-2nd: #f5f4fa;
   --white-color: #ffffff;
 }
+input {
+  border: none;
+  background: none;
+  font-family: inherit;
+  padding: 0;
+  margin: 0;
+}
 
 h1,
 h2,
@@ -36,44 +43,37 @@ body {
   }
 }
 
-header {  
- 
-  animation: 2s ease-out 0s 1 slideInFromTop; 
+header {
+  animation: 2s ease-out 0s 1 slideInFromTop;
 }
 
-main .main-banner, .brand-values, .portfolio-section { 
+main .main-banner,
+.brand-values,
+.portfolio-section {
   animation: 2s ease-out 0s 1 mainIsHiddenOnload, 2s ease-out 2s 1 fadeIn;
- 
 }
 
 @keyframes mainIsHiddenOnload {
   0% {
-    
-    opacity:0%;
+    opacity: 0%;
     transform: translatey(100px);
   }
   100% {
-    
-    opacity:0%;
+    opacity: 0%;
     transform: translatey(100px);
   }
-  
 }
 
 @keyframes fadeIn {
   0% {
-    
-    opacity:0%;
+    opacity: 0%;
     transform: translatey(100px) scale(93%) skew(2deg);
   }
   100% {
-    
     opacity: 100%;
     transform: translatey(0) scale(100%) skew(0deg);
   }
 }
-
-
 
 .container {
   box-sizing: border-box;
@@ -335,12 +335,11 @@ nav {
 
 .brand-values-icon-box:hover {
   /* transform: scale(80%); */
- background: var(--background-color);
+  background: var(--background-color);
   padding-bottom: 10px;
   padding-top: 10px;
   color: #f5f4fa;
   fill: #f5f4fa;
-  
 }
 
 .brand-values > li:hover .brand-values-icon-box {
@@ -350,7 +349,6 @@ nav {
   color: #f5f4fa;
   fill: #f5f4fa;
 }
-
 
 .hiddenheader {
   display: none;
@@ -393,7 +391,8 @@ nav {
   letter-spacing: 0.06em;
   color: var(--white-color);
   cursor: pointer;
-  transition: background cubic-bezier(0.4, 0, 0.2, 1), color cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background cubic-bezier(0.4, 0, 0.2, 1),
+    color cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 250ms;
 }
 
@@ -629,24 +628,23 @@ nav {
   border-radius: 0px 0px 4px 4px;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 800ms cubic-bezier(0.4, 0, 0.2, 1);
-    border-radius: 4px;
+  border-radius: 4px;
 }
 
 .team-member-card-photo-container {
   width: 270px;
-height: 260px;
-overflow: hidden;
-border-radius: 4px 4px 0 0;
+  height: 260px;
+  overflow: hidden;
+  border-radius: 4px 4px 0 0;
 }
 
 .team-member-card-gradient-overlay-container {
   position: relative;
   max-width: 270px;
-max-height: 260px;
-margin-left: auto;
+  max-height: 260px;
+  margin-left: auto;
   margin-right: auto;
   overflow: hidden;
-  
 }
 
 .gradient-overlay {
@@ -657,31 +655,36 @@ margin-left: auto;
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 47.71%, #FFFFFF 88.33%);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 47.71%,
+    #ffffff 88.33%
+  );
   transform: translateY(40%);
-  border-radius:4px 4px 0 0;
-  transition: border-radius 250ms, transform 1000ms cubic-bezier(0.4, 0, 0.2, 1) 260ms;
+  border-radius: 4px 4px 0 0;
+  transition: border-radius 250ms,
+    transform 1000ms cubic-bezier(0.4, 0, 0.2, 1) 260ms;
   overflow: hidden;
 }
 
 .team-member-card:hover .gradient-overlay {
   transform: translatey(10%);
-  opacity:100%;
+  opacity: 100%;
 }
 
-
 .team-member-card-photo-container > img {
-  transition: filter 2000ms 250ms, transform 600ms cubic-bezier(0.23, 1, 0.320, 1);
+  transition: filter 2000ms 250ms,
+    transform 600ms cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .team-member-card:hover img {
-filter: blur(5px);
-transform: scale(130%);
-border-radius: 4px 4px 0 0;
+  filter: blur(5px);
+  transform: scale(130%);
+  border-radius: 4px 4px 0 0;
 
-filter: gray blur(5px);
--webkit-filter: grayscale(100%);
-filter: grayscale(100%);
+  filter: gray blur(5px);
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
 }
 
 .team-member-card:hover {
@@ -797,6 +800,62 @@ footer {
   transform: scale(1.2);
 }
 
+.newsletter {
+  margin-left: 78px;
+  max-width: 570px;
+  display: block;
+  margin-block: 10px;
+  gap: 2;
+}
+
+.newsletter-form {
+  display: inline-flex;
+  gap: 12px;
+}
+
+.newsletter-form input {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background: transparent;
+  padding-left: 16px;
+  padding-right: 176px;
+  max-width: 358px;
+  margin-top: 20px;
+}
+
+.newsletter-label {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+  
+}
+
+.newsletter-submit-btn {
+  background: #2196f3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.9;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  padding-top: 10px;
+  padding-right: 28px;
+  padding-bottom: 10px;
+  padding-left: 42px;
+  color: var(--white-color);
+  border: none;
+  gap: 24px;
+  margin-top: 20px;
+}
+
 .portfolio-section {
   margin-top: 80px;
 }
@@ -814,7 +873,6 @@ footer {
   transition: box-shadow 700ms cubic-bezier(0.4, 0, 0.2, 1),
     transform 700ms cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
-  
 }
 
 .portfolio-work-item-photo-container {
@@ -824,9 +882,7 @@ footer {
   overflow: hidden;
   margin-left: auto;
   margin-right: auto;
-  
 }
-
 
 .portfolio-work-item-overlay {
   position: absolute;
@@ -836,7 +892,7 @@ footer {
   height: 100%;
   background: rgba(33, 150, 243, 0.9);
   transform: translateY(101%);
-  border-radius:4px;
+  border-radius: 4px;
   transition: border-radius 250ms, transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -852,7 +908,6 @@ footer {
   color: #ffffff;
   opacity: 0%;
   transform: translatey(24px);
-
 }
 
 .portfolio-work-item:hover .portfolio-work-item-overlay,
@@ -863,7 +918,6 @@ footer {
   border-left: 0px solid #eeeeee;
   border-right: 0px solid #eeeeee;
   border-bottom: 0px solid #eeeeee;
-  
 }
 .portfolio-work-item:hover .portfolio-work-item-overlay > p,
 .portfolio-work-item:focus .portfolio-work-item-overlay > p {
@@ -878,7 +932,7 @@ footer {
     1px 4px 6px rgba(0, 0, 0, 0.16); */
   box-shadow: 0px 0px 50px 2px rgba(0, 0, 0, 0.2);
   transform: scale(1.07);
-border-radius: 4px;
+  border-radius: 4px;
 }
 
 .portfolio-work-item-description {
