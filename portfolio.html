@@ -27,7 +27,11 @@
                 <a class="menu-item" href="./index.html">Agencja</a>
               </li>
               <li>
-                <a class="menu-item main-menu-active-link-portfolio" href="./portfolio.html">Portfolio</a>
+                <a
+                  class="menu-item main-menu-active-link-portfolio"
+                  href="./portfolio.html"
+                  >Portfolio</a
+                >
               </li>
               <li><a class="menu-item" href="#">Kontakt</a></li>
               <li class="active-link"></li>
@@ -380,6 +384,24 @@
               </li>
             </ul>
           </div>
+          <form class="newsletter">
+            <legend name="newsletter" class="newsletter-label" for="email"
+              >Zapisz się do Newslettera</legend
+            >
+            <fieldset class="newsletter-form">
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="E-mail"
+              />
+              <button type="submit" class="newsletter-submit-btn">
+                Zapisz się<svg class="icon-send" width="24" height="24">
+                  <use href="./images/icons/icons.svg#icon-send"></use>
+                </svg>
+              </button>
+            </fieldset>
+          </form>
         </div>
       </div>
     </footer>

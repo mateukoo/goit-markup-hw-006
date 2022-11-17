@@ -13,11 +13,23 @@ input {
   font-family: inherit;
   padding: 0;
   margin: 0;
+  outline: none;
 }
 
 fieldset {
-  border: none;
+  all: unset;
+}
+label {
+  font-family: inherit;
+  all: unset;
+}
+form {
   padding: 0;
+  margin: 0;
+}
+textarea {
+  padding: 0;
+  outline: none;
 }
 
 h1,
@@ -750,6 +762,7 @@ footer {
 .contact-info {
   padding-top: 20px;
   padding-bottom: 9px;
+  min-width: 246px;
 }
 
 .e-mail-link-in-footer {
@@ -767,7 +780,7 @@ footer {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--white-color);
-  padding-bottom: 20px;
+  padding-bottom: 24px;
 }
 
 .sm-rounded-button-footer-style-bg {
@@ -824,11 +837,14 @@ footer {
   border-radius: 4px;
   background: transparent;
   padding-left: 16px;
-  padding-right: 176px;
+  padding-right: 153px;
   max-width: 358px;
   margin-top: 20px;
+  color: var(--white-color);
 }
-
+.newsletter-form input {
+  outline: none;
+}
 .newsletter-label {
   font-style: normal;
   font-weight: 500;
@@ -837,7 +853,6 @@ footer {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #ffffff;
-  
 }
 
 .newsletter-submit-btn {
@@ -969,13 +984,217 @@ footer {
 
 .modal {
   position: relative;
-  width: 528px;
-  height: 581px;
   margin: auto;
   background: var(--white-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  width: 528px;
+}
+
+.modal-contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.modal-contact-form label {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+  color: #757575;
+  margin-bottom: 4px;
+}
+
+.modal-contact-form .fieldset {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  margin-block: 5px;
+}
+
+.modal-contact-form .fieldset .input {
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  width: 100%;
+  height: 40px;
+  padding-left: 42px;
+  padding-right: 16px;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-contact-form .fieldset svg {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  fill: var(--headline-color);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.fieldset:has(input:focus) svg,
+.fieldset:has(input:hover) svg {
+  fill: var(--brand-color);
+  
+}
+
+.modal-contact-form .fieldset .input:focus {
+  outline: 1px solid var(--brand-color);
+}
+.modal-contact-form .fieldset .input:hover {
+border: 1px solid var(--brand-color);
+  border-image: linear-gradient(
+      to bottom,
+      var(--brand-color),
+      var(--brand-color)
+    )
+    1 100%;
+  }
+
+.fieldset-legal-checkbox > p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+  color: #757575;
+}
+
+.legal-checkbox {
+  position: absolute;
+  visibility: hidden;
+  left: 0;
+  top: 0;
+}
+
+.fieldset-legal-checkbox {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 7px;
+  margin-top: 20px;
+}
+.fieldset-legal-checkbox p > span > a {
+  cursor: pointer;
+  color: var(--brand-color);
+}
+
+.fieldset-legal-checkbox input.checkmark {
+  all: unset;
+  width: 12px;
+  height: 11px;
+  border: 2px solid #000000;
+  border-radius: 3px;
+  background-color: var(--white-color);
+}
+
+.icon-check {
+  position: absolute;
+  left: 14px;
+  fill: var(--white-color);
+  background-color: var(--brand-color);
+  width: 16px;
+  height: 15px;
+  border: 2px solid var(--brand-color);
+  border-radius: 3px;
+  visibility: hidden;
+}
+
+.fieldset-legal-checkbox input ~ .icon-check {
+  visibility: hidden;
+}
+
+.fieldset-legal-checkbox input:checked ~ .icon-check {
+  visibility: visible;
+}
+
+.fieldset-legal-checkbox:has(input:checked) input {
+  z-index: 1;
+  opacity:0;
+}
+
+.fieldset-legal-checkbox input:not(:checked) ~ .icon-check {
+  visibility: hidden;
+}
+
+.modal form:has(.fieldset-legal-checkbox input:not(:checked) ) .modal-submit-btn {
+  opacity: 50%;
+  box-shadow: none;
+  cursor:not-allowed ;
+}
+
+
+
+textarea {
+  resize: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  width: 100%;
+  padding-left: 16px;
+  padding-top: 12px;
+  padding-right: 16px;
+  padding-bottom: 12px;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+textarea:focus, textarea:hover {
+  border: 1px solid var(--brand-color);
+  border-image: linear-gradient(
+      to bottom,
+      var(--brand-color),
+      var(--brand-color)
+    )
+    1 100%;
+}
+
+textarea::placeholder {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.modal-contact-form legend {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-bottom: 7px;
+  color: #212121;
+}
+
+.modal-submit-btn {
+  background: #2196f3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.9;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  padding-top: 10px;
+  padding-right: 76px;
+  padding-bottom: 10px;
+  padding-left: 76px;
+  color: var(--white-color);
+  border: none;
+  margin-top: 25px;
+  cursor: pointer;
+  /* margin: 0 auto; */
 }
 
 .close-btn {

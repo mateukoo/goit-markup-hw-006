@@ -27,7 +27,8 @@
   transform: scale(0.8);
 }
 
-.content_cursor {
+/* .content_cursor {
   position:relative;
   height:100%;
-}
+  width:100%;
+} */
