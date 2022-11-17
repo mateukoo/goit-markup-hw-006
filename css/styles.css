@@ -1082,6 +1082,7 @@ border: 1px solid var(--brand-color);
       var(--brand-color)
     )
     1 100%;
+    background-color: var(--background-color-2nd);
   }
 
 .fieldset-legal-checkbox > p {
@@ -1183,6 +1184,10 @@ textarea:focus, textarea:hover {
       var(--brand-color)
     )
     1 100%;
+}
+
+textarea:hover {
+  background-color: var(--background-color-2nd);
 }
 
 textarea::placeholder {
