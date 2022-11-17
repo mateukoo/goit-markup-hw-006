@@ -1121,6 +1121,7 @@ border: 1px solid var(--brand-color);
   border-radius: 3px;
   background-color: var(--white-color);
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
 }
 
 .icon-check {
@@ -1133,35 +1134,32 @@ border: 1px solid var(--brand-color);
   border: 2px solid var(--brand-color);
   border-radius: 3px;
   visibility: hidden;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
 }
 
-.fieldset-legal-checkbox input ~ .icon-check {
+.fieldset-legal-checkbox input.checkmark:not(:checked) ~ .icon-check {
   visibility: hidden;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 250ms visibility cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.fieldset-legal-checkbox input:checked ~ .icon-check {
+.fieldset-legal-checkbox input.checkmark:checked ~ .icon-check {
   visibility: visible;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 250ms visibility cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.fieldset-legal-checkbox:has(input:checked) input {
+.fieldset-legal-checkbox:has(input.checkmark:checked) input {
   z-index: 1;
-  opacity:0;
+  opacity: 0;
   
 }
 
-.fieldset-legal-checkbox input:not(:checked) ~ .icon-check {
-  visibility: hidden;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.modal form:has(.fieldset-legal-checkbox input:not(:checked) ) .modal-submit-btn {
+.modal form:has(.fieldset-legal-checkbox input.checkmark:not(:checked)) .modal-submit-btn {
   opacity: 50%;
   box-shadow: none;
   cursor:not-allowed ;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 250ms 0.12s cubic-bezier(0.4, 0, 0.2, 1);
+  
 }
 
 
@@ -1225,7 +1223,7 @@ textarea::placeholder {
   border: none;
   margin-top: 25px;
   cursor: pointer;
-  /* margin: 0 auto; */
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .close-btn {
