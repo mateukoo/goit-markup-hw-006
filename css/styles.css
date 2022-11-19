@@ -9,6 +9,7 @@
 }
 input {
   border: none;
+  outline: none;
   background: none;
   font-family: inherit;
   padding: 0;
@@ -866,9 +867,26 @@ footer {
   margin-top: 20px;
   color: var(--white-color);
 }
+
+.newsletter-form input:hover,
+.newsletter-form input:focus {
+  border: 1px solid var(--brand-color);
+  border-image: linear-gradient(
+      to bottom,
+      var(--brand-color),
+      var(--brand-color)
+    )
+    1 100%;
+  
+  
+}
+
+
 .newsletter-form input {
   outline: none;
 }
+
+
 .newsletter-label {
   font-style: normal;
   font-weight: 500;
