@@ -1274,18 +1274,25 @@ textarea::placeholder {
   padding: 6px;
   border-radius: 128px;
   border: 1px;
-  background: #ffffff;
+  background: var(--white-color);
   border: 1px solid rgba(0, 0, 0, 0.1);
   right: 8px;
   top: 8px;
   cursor: pointer;
   fill: var(--brand-secondary-color);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .close-btn:hover,
 .close-btn:hover > svg > path {
-  background: var(--brand-color);
-  fill: var(--white-color);
+  background: var(--white-color);
+  fill: var(--brand-color);
+  transform: rotate(90deg);
+}
+
+.close-btn:hover {
+  background-color: var(--background-color-2nd);
+  border: 1px solid var(--brand-color);
 }
 
 .is-hidden {
